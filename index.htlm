@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El ADN de las Historias: De Aristóteles a Hollywood</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .infographic-connector {
+            position: relative;
+            width: 2px;
+            background-color: #f97316; /* orange-500 */
+            margin: 0 auto;
+        }
+        .infographic-connector::after {
+            content: '▼';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #f97316;
+            font-size: 1.5rem;
+        }
+        .quiz-option {
+            transition: all 0.2s ease-in-out;
+        }
+        .quiz-option:hover {
+            transform: translateY(-2px);
+            background-color: #fb923c; /* orange-400 */
+        }
+        .quiz-option.selected {
+            background-color: #ea580c; /* orange-600 */
+            color: white;
+            border-color: #c2410c; /* orange-700 */
+        }
+        .correct {
+            background-color: #16a34a !important; /* green-600 */
+            color: white !important;
+        }
+        .incorrect {
+            background-color: #dc2626 !important; /* red-600 */
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="bg-orange-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-orange-600 mb-2">El ADN de las Historias</h1>
+            <p class="text-lg md:text-xl text-gray-600">De Aristóteles a Hollywood y las Grandes Marcas</p>
+            <p class="mt-4 text-sm text-gray-500 font-semibold">DESARROLLADO POR EL PROFESOR MIGUELANGEL TISERA</p>
+        </header>
+
+        <!-- Sección de Presentación tipo PowerPoint -->
+        <section id="presentation" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Presentación Interactiva</h2>
+            <div id="slider-container" class="relative max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200">
+                <div class="p-8 md:p-12 min-h-[450px] flex flex-col justify-center">
+                    <!-- Slides -->
+                    <div class="slide active">
+                        <h3 class="text-3xl md:text-4xl font-bold text-orange-700 mb-4 text-center">La Estructura Narrativa Universal</h3>
+                        <p class="text-center text-lg">Un recorrido desde la Poética de Aristóteles hasta las estrategias de marca del siglo XXI.</p>
+                         <div class="text-center mt-8">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto text-orange-500"><path d="m16 5-8 8 8 8"/></svg>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <h3 class="text-2xl font-bold text-orange-700 mb-4">1. El Origen: La Poética de Aristóteles</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-lg">
+                            <li><strong class="text-orange-600">Mímesis:</strong> La historia como una "imitación de una acción".</li>
+                            <li><strong class="text-orange-600">Mythos (Trama):</strong> El elemento más importante, con una unidad causal.</li>
+                            <li class="p-4 bg-orange-50 rounded-lg mt-2">La estructura fundamental: <strong>Principio, Medio y Fin</strong>.</li>
+                        </ul>
+                    </div>
+                     <div class="slide">
+                        <h3 class="text-2xl font-bold text-orange-700 mb-4">2. La Modernización: Syd Field</h3>
+                        <p class="mb-4 text-lg">Field adaptó las ideas de Aristóteles a una estructura precisa para los guiones de cine.</p>
+                        <div class="w-full bg-gray-200 rounded-full h-8 mt-6 flex items-center text-white font-bold text-xs md:text-sm">
+                            <div class="bg-orange-500 h-8 rounded-l-full flex items-center justify-center" style="width: 25%">Acto I</div>
+                            <div class="bg-amber-500 h-8 flex items-center justify-center" style="width: 50%">Acto II</div>
+                            <div class="bg-orange-500 h-8 rounded-r-full flex items-center justify-center" style="width: 25%">Acto III</div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <h3 class="text-2xl font-bold text-orange-700 mb-4">3. El Arquetipo: El Viaje del Héroe</h3>
+                        <p class="text-lg">Joseph Campbell descubrió el **monomito**: una estructura narrativa arquetípica presente en mitos de todo el mundo.</p>
+                         <ul class="list-disc pl-5 space-y-2 text-lg mt-4">
+                           <li><strong>La Partida (Acto I):</strong> Llamada a la aventura y cruce del umbral.</li>
+                           <li><strong>La Iniciación (Acto II):</strong> Pruebas, aliados y la prueba suprema.</li>
+                           <li><strong>El Regreso (Acto III):</strong> El camino de vuelta a casa, transformado.</li>
+                        </ul>
+                    </div>
+                    <div class="slide">
+                        <h3 class="text-2xl font-bold text-orange-700 mb-4">4. Aplicación en Películas de Marca</h3>
+                        <p class="text-lg">Las marcas usan estas estructuras para conectar emocionalmente, posicionando al consumidor como el héroe de su propia historia.</p>
+                        <div class="flex justify-center items-center space-x-8 mt-6 text-2xl font-bold">
+                           <span class="text-pink-500">Barbie</span>
+                           <span class="text-red-600">Mario</span>
+                           <span class="text-black">NIKE</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controles de Navegación -->
+                <div class="absolute bottom-0 left-0 right-0 flex justify-between items-center p-4 bg-orange-100 border-t border-orange-200">
+                    <button id="prev-btn" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">Anterior</button>
+                    <div id="slide-counter" class="text-gray-600 font-semibold"></div>
+                    <button id="next-btn" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">Siguiente</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Tarjetas Interactivas -->
+        <section id="tarjetas-conceptos" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Resumen de Conceptos Clave</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Tarjeta Aristóteles -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-orange-700 mb-4">Aristóteles: La Semilla</h3>
+                    <p class="mb-4 text-gray-600">El filósofo griego fue el primero en desglosar la estructura dramática, estableciendo las bases de toda la narrativa occidental.</p>
+                </div>
+                <!-- Tarjeta Syd Field -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-orange-700 mb-4">Syd Field: El Mapa</h3>
+                    <p class="mb-4 text-gray-600">Modernizó a Aristóteles para el cine de Hollywood, creando el famoso paradigma de los tres actos, una hoja de ruta para guionistas.</p>
+                </div>
+                <!-- Tarjeta Campbell -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-orange-700 mb-4">J. Campbell: El Alma</h3>
+                    <p class="mb-4 text-gray-600">Descubrió el "Viaje del Héroe", un patrón arquetípico de transformación que se repite en los mitos de todas las culturas.</p>
+                </div>
+                <!-- Tarjeta Marcas -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    <h3 class="text-2xl font-bold text-orange-700 mb-4">Las Marcas: El Mito</h3>
+                    <p class="mb-4 text-gray-600">Las marcas modernas usan estas estructuras para crear un discurso emocional, convirtiendo productos en símbolos y consumidores en héroes.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección Infografía -->
+        <section id="infographic" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Infografía: El Flujo de la Narrativa</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 text-center">
+                    <h3 class="text-2xl font-bold text-orange-700">Aristóteles: La Semilla</h3>
+                </div>
+                <div class="h-16 infographic-connector"></div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 text-center">
+                    <h3 class="text-2xl font-bold text-amber-700">Syd Field & Campbell: El Crecimiento</h3>
+                </div>
+                <div class="h-16 infographic-connector"></div>
+                <div class="bg-gray-800 text-white p-6 rounded-xl shadow-lg text-center">
+                    <h3 class="text-2xl font-bold text-yellow-400">Las Marcas: El Fruto</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Generador de Historias con IA -->
+        <section id="gemini-creator" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2">Crea tu Propia Saga con IA ✨</h2>
+            <p class="text-center text-gray-600 mb-8">Usa el poder de la IA para convertir tu idea en una estructura narrativa completa.</p>
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-200">
+                <div class="mb-4">
+                    <label for="story-idea" class="block text-lg font-semibold mb-2">1. Escribe tu idea base:</label>
+                    <input type="text" id="story-idea" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent" placeholder="Ej: Un bibliotecario que encuentra un mapa en un libro antiguo.">
+                </div>
+                <div class="mb-6">
+                    <label for="structure-select" class="block text-lg font-semibold mb-2">2. Elige una estructura:</label>
+                    <select id="structure-select" class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-orange-400 focus:border-transparent">
+                        <option value="El Viaje del Héroe">El Viaje del Héroe</option>
+                        <option value="La Estructura de Tres Actos">La Estructura de Tres Actos</option>
+                    </select>
+                </div>
+                <button id="generate-story-btn" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                    Generar Estructura
+                </button>
+                <div id="story-loader" class="text-center mt-6 hidden">
+                    <p class="text-orange-600 font-semibold">Creando tu historia... 🧠</p>
+                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500 mx-auto mt-4"></div>
+                </div>
+                <div id="story-output" class="mt-6 p-4 bg-orange-50 rounded-lg border border-orange-200 min-h-[100px] whitespace-pre-wrap">
+                    <p class="text-gray-500">Aquí aparecerá el resumen de tu historia...</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección Quiz Interactivo -->
+        <section id="quiz" class="pt-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Quiz Interactivo</h2>
+            <div id="quiz-container" class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-2xl border border-gray-200">
+                <!-- Las preguntas se insertarán aquí -->
+            </div>
+            <div id="quiz-results" class="max-w-3xl mx-auto mt-6 text-center"></div>
+             <div class="text-center mt-8">
+                <button id="submit-quiz-btn" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105">Ver Resultados</button>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="text-center p-6 bg-orange-100 mt-8 border-t border-orange-200">
+        <p class="text-gray-600">Una exploración de la narrativa universal.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lógica del Slider
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const slideCounter = document.getElementById('slide-counter');
+            let currentSlide = 0;
+
+            function showSlide(n) {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (n + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+                slideCounter.textContent = `Diapositiva ${currentSlide + 1} de ${slides.length}`;
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === slides.length - 1;
+                prevBtn.classList.toggle('opacity-50', currentSlide === 0);
+                nextBtn.classList.toggle('opacity-50', currentSlide === slides.length - 1);
+            }
+
+            prevBtn.addEventListener('click', () => { showSlide(currentSlide - 1); });
+            nextBtn.addEventListener('click', () => { showSlide(currentSlide + 1); });
+            showSlide(0);
+
+            // Lógica del Quiz
+            const quizContainer = document.getElementById('quiz-container');
+            const resultsContainer = document.getElementById('quiz-results');
+            const submitQuizBtn = document.getElementById('submit-quiz-btn');
+
+            const quizData = [
+                { question: "¿Quién fue el primero en analizar la estructura dramática con 'Principio, Medio y Fin'?", options: ["Syd Field", "Aristóteles", "Joseph Campbell", "Platón"], answer: "Aristóteles" },
+                { question: "En el paradigma de Syd Field, ¿cómo se llama el evento que lanza la historia al final del Acto I?", options: ["Punto Medio", "Clímax", "Primer Punto de Giro", "Resolución"], answer: "Primer Punto de Giro" },
+                { question: "El 'Viaje del Héroe' es un concepto desarrollado por:", options: ["Aristóteles", "George Lucas", "Joseph Campbell", "Syd Field"], answer: "Joseph Campbell" },
+                { question: "El momento de revelación o paso de la ignorancia al conocimiento se conoce como:", options: ["Catarsis", "Peripecia", "Hamartia", "Anagnórisis"], answer: "Anagnórisis" },
+                { question: "Cuando Nike usa el eslogan 'Just Do It' para inspirar a un atleta, ¿qué rol de arquetipo está asumiendo la marca?", options: ["El Héroe", "El Villano", "El Mentor", "El Bufón"], answer: "El Mentor" }
+            ];
+
+            function buildQuiz() {
+                const output = quizData.map((currentQuestion, questionNumber) => {
+                    const options = currentQuestion.options.map(option =>
+                        `<button class="quiz-option w-full text-left p-4 my-2 bg-orange-200 border border-orange-300 rounded-lg" data-question="${questionNumber}" data-value="${option}">${option}</button>`
+                    ).join('');
+                    return `<div class="mb-6"><p class="text-lg font-semibold mb-2">${questionNumber + 1}. ${currentQuestion.question}</p><div class="options-container" id="q${questionNumber}">${options}</div></div>`;
+                }).join('');
+                quizContainer.innerHTML = output;
+            }
+
+            function showResults() {
+                const answerContainers = quizContainer.querySelectorAll('.options-container');
+                let numCorrect = 0;
+                quizData.forEach((currentQuestion, questionNumber) => {
+                    const answerContainer = answerContainers[questionNumber];
+                    const userAnswerNode = answerContainer.querySelector(`button.selected`);
+                    const userAnswer = userAnswerNode ? userAnswerNode.dataset.value : undefined;
+                    
+                    answerContainer.querySelectorAll('button').forEach(opt => {
+                        opt.disabled = true;
+                        if (opt.dataset.value === currentQuestion.answer) opt.classList.add('correct');
+                    });
+
+                    if (userAnswer === currentQuestion.answer) {
+                        numCorrect++;
+                    } else if (userAnswerNode) {
+                        userAnswerNode.classList.add('incorrect');
+                    }
+                });
+                resultsContainer.innerHTML = `<h3 class="text-2xl font-bold">Obtuviste ${numCorrect} de ${quizData.length} respuestas correctas.</h3>`;
+                submitQuizBtn.style.display = 'none';
+            }
+
+            buildQuiz();
+            quizContainer.addEventListener('click', e => {
+                if (e.target.classList.contains('quiz-option')) {
+                    const qNum = e.target.dataset.question;
+                    document.querySelectorAll(`#q${qNum} .quiz-option`).forEach(opt => opt.classList.remove('selected'));
+                    e.target.classList.add('selected');
+                }
+            });
+            submitQuizBtn.addEventListener('click', showResults);
+
+            // Lógica del Generador de Historias con Gemini API
+            const generateStoryBtn = document.getElementById('generate-story-btn');
+            const storyIdeaInput = document.getElementById('story-idea');
+            const structureSelect = document.getElementById('structure-select');
+            const storyLoader = document.getElementById('story-loader');
+            const storyOutput = document.getElementById('story-output');
+
+            storyIdeaInput.addEventListener('input', () => {
+                generateStoryBtn.disabled = storyIdeaInput.value.trim() === '';
+            });
+
+            async function generateStory() {
+                const idea = storyIdeaInput.value.trim();
+                if (!idea) {
+                    storyOutput.innerHTML = `<p class="text-red-500">Por favor, escribe una idea para comenzar.</p>`;
+                    return;
+                }
+
+                storyLoader.classList.remove('hidden');
+                generateStoryBtn.disabled = true;
+                storyOutput.innerHTML = `<p class="text-gray-500">Contactando a la musa digital...</p>`;
+
+                const structure = structureSelect.value;
+                const systemPrompt = "Actúa como un guionista experto y un maestro de la narratología. Tu tarea es tomar la idea base de un usuario y desarrollarla en un resumen de la trama, siguiendo estrictamente la estructura narrativa especificada (Viaje del Héroe o Tres Actos). Desglosa la historia en sus partes clave de forma clara y concisa. Usa negritas para los títulos de cada etapa.";
+                const userQuery = `Basado en la idea: "${idea}", crea un resumen de la trama siguiendo la estructura de "${structure}".`;
+                
+                const apiKey = ""; // Canvas will provide the key
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                
+                const payload = {
+                    contents: [{ parts: [{ text: userQuery }] }],
+                    systemInstruction: { parts: [{ text: systemPrompt }] },
+                };
+
+                let retries = 3;
+                let delay = 1000;
+                let response;
+
+                while (retries > 0) {
+                    try {
+                        response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (response.ok) {
+                            const result = await response.json();
+                            const candidate = result.candidates?.[0];
+                            if (candidate && candidate.content?.parts?.[0]?.text) {
+                                let text = candidate.content.parts[0].text;
+                                text = text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-orange-700">$1</strong>');
+                                storyOutput.innerHTML = text;
+                            } else {
+                                storyOutput.innerHTML = `<p class="text-red-500">La respuesta de la IA no tuvo el formato esperado. Intenta de nuevo.</p>`;
+                            }
+                            break; 
+                        } else {
+                             throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+
+                    } catch (error) {
+                        console.error("API call failed:", error);
+                        retries--;
+                        if (retries === 0) {
+                            storyOutput.innerHTML = `<p class="text-red-500">Error al contactar la IA después de varios intentos. Por favor, revisa la consola para más detalles.</p>`;
+                        } else {
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                            delay *= 2;
+                        }
+                    }
+                }
+
+                storyLoader.classList.add('hidden');
+                generateStoryBtn.disabled = false;
+            }
+
+            generateStoryBtn.addEventListener('click', generateStory);
+        });
+    </script>
+</body>
+</html>
+
